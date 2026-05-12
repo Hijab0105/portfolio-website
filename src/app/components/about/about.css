@@ -1,0 +1,16 @@
+.about-box {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.about-box:hover {
+  transform: translateY(-10px);
+}
+
+.about-box p {
+  margin-top: 20px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
