@@ -58,19 +58,3 @@
   }
 }
 
-.cv-btn {
-  padding: 12px 22px;
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.cv-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(56,189,248,0.4);
-}
