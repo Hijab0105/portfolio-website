@@ -11,13 +11,9 @@ export class Home {
 
   private http = inject(HttpClient);
 
-  sendEmail() {
-  window.location.href = "mailto:zhijab408@example.com?subject=Hiring Request&body=Hi, I want to hire you for a project.";
-}
-
   downloadCV() {
   
- this.http.get('/assets/resume/my-resume.pdf', { responseType: 'blob' })
+ this.http.get('/resume/my-resume.pdf', { responseType: 'blob' })
       .subscribe({
         next: (blob) => {
           const url = window.URL.createObjectURL(blob);
