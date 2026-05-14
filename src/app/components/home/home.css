@@ -57,4 +57,19 @@
     width: 280px;
   }
 }
+.hire-btn {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 
+.hire-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
