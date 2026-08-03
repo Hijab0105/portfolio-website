@@ -3,11 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar';
 import { Contact } from './components/contact/contact';
 import { About } from './components/about/about';
-import { Home } from './components/home/home';
 import { Projects } from './components/projects/projects';
 import { Skills } from './components/skills/skills';
 import { Services } from './components/services/services';
 import { Footer } from './components/footer/footer';
+import { Hero } from './components/hero/hero';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ import { Footer } from './components/footer/footer';
     NavbarComponent,
     Contact,
     About,
-    Home,
+    Hero,
     Contact,
     Projects,
     Skills,

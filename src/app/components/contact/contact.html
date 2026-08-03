@@ -1,9 +1,129 @@
 <section id="contact">
-  <h2 class="section-title">Contact Me</h2>
 
-  <div class="contact-info">
-    <p><strong>Email:</strong> zhijab408@example.com</p>
-    <p><strong>Location:</strong> Islamabad, Pakistan</p>
-    <p><strong>GitHub:</strong> github.com/Hijab0105</p>
+  <div class="contact-header">
+
+    <span>Get In Touch</span>
+
+    <h2>
+      Let's Build Something <strong>Great</strong>
+    </h2>
+
+    <p>
+      Have a project idea or looking for a developer?
+      Feel free to reach out.
+    </p>
+
   </div>
+
+
+  <div class="contact-container">
+
+
+    <!-- Left Side -->
+
+    <div class="contact-info">
+
+      <h3>Let's Talk</h3>
+
+      <p>
+        I am open to freelance opportunities,
+        internships and full-time roles.
+        Let's create something impactful together.
+      </p>
+
+      <div class="contact-item">
+        <i class="bi bi-envelope"></i>
+        <span>zhijab408@gmail.com</span>
+      </div>
+
+      <div class="contact-item">
+        <i class="bi bi-geo-alt"></i>
+        <span>Islamabad, Pakistan</span>
+      </div>
+
+      <div class="contact-social">
+
+        <a href="https://github.com/Hijab0105" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+
+        <!-- Replace # with your LinkedIn profile -->
+        <a href="#" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- Contact Form -->
+
+    <form
+      class="contact-form"
+      #contactForm="ngForm"
+      (ngSubmit)="sendEmail(contactForm)"
+    >
+
+      <div class="input-group">
+
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="contactData.name"
+          placeholder="Your Name"
+          required>
+
+      </div>
+
+
+      <div class="input-group">
+
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="contactData.email"
+          placeholder="Your Email"
+          required>
+
+      </div>
+
+
+      <div class="input-group">
+
+        <input
+          type="text"
+          name="subject"
+          [(ngModel)]="contactData.subject"
+          placeholder="Subject"
+          required>
+
+      </div>
+
+
+      <div class="input-group">
+
+        <textarea
+          rows="6"
+          name="message"
+          [(ngModel)]="contactData.message"
+          placeholder="Your Message"
+          required>
+        </textarea>
+
+      </div>
+
+
+      <button type="submit">
+
+        Send Message
+
+        <i class="bi bi-send"></i>
+
+      </button>
+
+    </form>
+
+  </div>
+
 </section>
