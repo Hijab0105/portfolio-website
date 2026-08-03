@@ -1,51 +1,261 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth;
+/* ===============================
+   PROJECT PHOENIX DESIGN SYSTEM
+================================*/
+
+:root{
+
+  --bg:#111111;
+  --surface:#1A1A1A;
+  --card:#232323;
+
+  --rust:#A65A3A;
+  --bronze:#C68642;
+  --gold:#D8A05A;
+
+  --text:#F4F4F4;
+  --muted:#A9A9A9;
+
+  --border:#333333;
+
+  --radius:18px;
+
+  --transition:.35s ease;
+
+  --shadow:
+      0 10px 30px rgba(0,0,0,.35);
+
 }
 
-body {
-  background: #0f172a;
-  color: white;
-  overflow-x: hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-section {
-  padding: 100px 10%;
+html{
+
+    scroll-behavior:smooth;
+
 }
 
-h1,
-h2,
-h3 {
-  font-weight: bold;
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
 }
 
-.container {
-  width: 100%;
+/* headings */
+
+h1,h2,h3,h4{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
 }
 
-.btn {
-  padding: 14px 30px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  background: linear-gradient(45deg, #06b6d4, #8b5cf6);
-  color: white;
-  font-weight: bold;
-  transition: 0.4s;
+/* links */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
 }
 
-.btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+/* buttons */
+
+button{
+
+    cursor:pointer;
+
+    font-family:inherit;
+
 }
 
-.section-title {
-  text-align: center;
-  font-size: 40px;
-  margin-bottom: 60px;
-  color: #38bdf8;
+/* images */
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* selection */
+
+::selection{
+
+    background:var(--rust);
+
+    color:white;
+
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#181818;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(var(--rust),var(--bronze));
+
+    border-radius:50px;
+
+}
+
+/* reusable container */
+
+.container{
+
+    width:min(1180px,90%);
+
+    margin:auto;
+
+}
+
+/* section */
+
+section{
+
+    padding:120px 0;
+
+}
+
+/* glass */
+
+.glass{
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* cards */
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* buttons */
+
+.btn-primary{
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    border:none;
+
+    background:linear-gradient(135deg,var(--rust),var(--bronze));
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn-secondary{
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    border:1px solid var(--border);
+
+    background:transparent;
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--surface);
+
+}
+
+/* fade animation */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.fade-up{
+
+animation:fadeUp .9s ease both;
+
+}
+html{
+
+scroll-behavior:smooth;
+
 }

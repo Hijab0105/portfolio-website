@@ -1,53 +1,337 @@
+/* ===================================
+   PREMIUM GLASS NAVBAR
+=================================== */
+
 .navbar {
-  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  padding: 20px 0;
+  transition: all .4s ease;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #38bdf8;
+.navbar.scrolled {
+  background: rgba(17, 17, 17, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 10px 35px rgba(0,0,0,.35);
 }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-  list-style: none;
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
+/* =========================
+LOGO
+========================= */
+
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:2rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:white;
+  transition:.35s;
 }
 
-.nav-links a:hover {
-  color: #38bdf8;
+.logo span{
+  color:var(--bronze);
+  display:inline-block;
+  transition:.5s;
 }
 
-.menu {
-  display: none;
-  font-size: 35px;
-  cursor: pointer;
+.logo:hover{
+  transform:scale(1.08);
 }
 
-@media(max-width:768px) {
-  .nav-links {
-    position: absolute;
-    top: 80px;
-    right: -100%;
-    background: #111827;
-    width: 250px;
-    flex-direction: column;
-    padding: 30px;
-    transition: 0.4s;
-  }
+.logo:hover span{
+  transform:rotate(-15deg) scale(1.2);
+}
 
-  .nav-links.active {
-    right: 0;
-  }
+/* =========================
+NAVIGATION
+========================= */
 
-  .menu {
-    display: block;
-  }
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:42px;
+  list-style:none;
+}
+
+.nav-links li{
+  list-style:none;
+}
+
+.nav-links a{
+
+  position:relative;
+
+  color:#f4f4f4;
+
+  font-size:15px;
+
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+  transition:.35s;
+
+  padding:8px 0;
+
+}
+
+.nav-links a:hover{
+
+  color:var(--bronze);
+
+}
+
+.nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+
+  bottom:-4px;
+
+  width:0;
+
+  height:2px;
+
+  border-radius:20px;
+
+  background:linear-gradient(
+      90deg,
+      var(--rust),
+      var(--bronze)
+  );
+
+  transition:.35s;
+
+  transform:translateX(-50%);
+
+}
+
+.nav-links a:hover::after{
+
+  width:100%;
+
+}
+
+/* =========================
+RIGHT SIDE
+========================= */
+
+.nav-actions{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+
+}
+
+/* =========================
+PREMIUM BUTTON
+========================= */
+
+.hire-btn{
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:13px 30px;
+
+  border-radius:50px;
+
+  background:linear-gradient(
+      135deg,
+      var(--rust),
+      var(--bronze)
+  );
+
+  color:white;
+
+  font-weight:600;
+
+  letter-spacing:.5px;
+
+  transition:.45s;
+
+  box-shadow:
+      0 10px 25px rgba(198,134,66,.28);
+
+}
+
+.hire-btn::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+
+  left:-120%;
+
+  width:80%;
+
+  height:100%;
+
+  background:
+
+      linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,.45),
+          transparent
+      );
+
+  transition:.8s;
+
+}
+
+.hire-btn:hover::before{
+
+  left:140%;
+
+}
+
+.hire-btn:hover{
+
+  transform:translateY(-4px) scale(1.05);
+
+  box-shadow:
+
+      0 18px 45px rgba(198,134,66,.45);
+
+}
+
+/* =========================
+MOBILE BUTTON
+========================= */
+
+.menu-btn{
+
+  display:none;
+
+  border:none;
+
+  background:transparent;
+
+  color:white;
+
+  font-size:2rem;
+
+  cursor:pointer;
+
+  transition:.35s;
+
+}
+
+.menu-btn:hover{
+
+  color:var(--bronze);
+
+  transform:rotate(90deg);
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.nav-container{
+
+position:relative;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+.nav-links{
+
+position:absolute;
+
+top:85px;
+
+left:0;
+
+width:100%;
+
+padding:30px;
+
+display:none;
+
+flex-direction:column;
+
+gap:28px;
+
+background:rgba(22,22,22,.96);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:18px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+}
+
+.nav-links.active{
+
+display:flex;
+
+animation:menuFade .35s ease;
+
+}
+
+.hire-btn{
+
+display:none;
+
+}
+
+}
+
+@keyframes menuFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
 }

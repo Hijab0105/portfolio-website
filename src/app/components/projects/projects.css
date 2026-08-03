@@ -1,21 +1,239 @@
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+#projects {
+
+    padding:100px 8%;
+    background:#080706;
+
 }
+
+
+
+.projects-header {
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+
+
+.projects-header span {
+
+    color:#c47a4a;
+    font-weight:600;
+
+}
+
+
+
+.projects-header p {
+
+    color:#aaa09a;
+
+}
+
+
+
+.projects-grid {
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+
+}
+
+
 
 .project-card {
-  background: #1e293b;
-  padding: 40px;
-  border-radius: 20px;
-  transition: 0.4s;
+
+
+    position:relative;
+
+    padding:35px;
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.08),
+    rgba(80,45,25,.15)
+    );
+
+
+    border:1px solid rgba(196,122,74,.25);
+
+
+    border-radius:30px;
+
+
+    transition:.4s;
+
+
 }
+
+
 
 .project-card:hover {
-  transform: translateY(-10px);
+
+
+    transform:translateY(-12px);
+
+
+    box-shadow:
+
+    0 20px 50px rgba(196,122,74,.25);
+
+
 }
 
+
+
+.project-number {
+
+
+    position:absolute;
+
+    top:20px;
+
+    right:30px;
+
+
+    font-size:50px;
+
+    font-weight:800;
+
+    color:rgba(196,122,74,.15);
+
+
+}
+
+
+
+.project-card h3 {
+
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
 .project-card p {
-  margin: 20px 0;
-  color: #cbd5e1;
+
+
+    color:#b8aea7;
+
+    line-height:1.7;
+
+
+}
+
+
+
+
+.project-stack {
+
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:25px 0;
+
+
+}
+
+
+
+
+.project-stack span {
+
+
+    background:rgba(196,122,74,.15);
+
+
+    color:#d49a6a;
+
+
+    padding:7px 15px;
+
+
+    border-radius:20px;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+.project-buttons {
+
+
+    display:flex;
+
+    gap:15px;
+
+
+}
+
+
+
+
+.project-buttons a {
+
+
+    text-decoration:none;
+
+    padding:12px 25px;
+
+
+    border-radius:25px;
+
+
+    border:1px solid #c47a4a;
+
+
+    color:#c47a4a;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.project-buttons a:hover {
+
+
+    background:#c47a4a;
+
+    color:white;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.projects-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
 }
